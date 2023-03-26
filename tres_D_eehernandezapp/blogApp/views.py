@@ -2,8 +2,12 @@ from django.shortcuts import render, redirect
 from blogApp.models import Pais, Posts, Categoria, Tag
 from django.utils import timezone
 from .forms import PostsForm, TagForm, CategoriaForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+def index_page(request):
+    return render(request, 'index_page.html')
+@login_required
 def home(request):
     if request.user.is_authenticated:
         posts = Posts.objects.all()
@@ -11,6 +15,7 @@ def home(request):
     else:
         return redirect("/loginApp/login/")
 
+@login_required
 def posts(request):
     if request.user.is_authenticated:
         try:
@@ -22,6 +27,7 @@ def posts(request):
     else:
         return redirect("/loginApp/login/")
 
+@login_required
 def create_post(request):
     user = request.user
     if user.is_authenticated:
@@ -39,6 +45,7 @@ def create_post(request):
         return redirect("/loginApp/login/")
 
 
+@login_required
 def create_tag(request):
     user = request.user
     if user.is_authenticated:
@@ -56,6 +63,7 @@ def create_tag(request):
         return redirect("/loginApp/login/")
 
 
+@login_required
 def create_categoria(request):
     user = request.user
     if user.is_authenticated:
@@ -73,6 +81,7 @@ def create_categoria(request):
         return redirect("/loginApp/login/")
 
 
+@login_required
 def edit_post(request, id):
     user = request.user
     if user.is_authenticated:
@@ -89,6 +98,7 @@ def edit_post(request, id):
         return redirect("/loginApp/login/")
 
 
+@login_required
 def delete_post(request, id):
     user = request.user
     if user.is_authenticated:
@@ -100,6 +110,7 @@ def delete_post(request, id):
         return redirect("/loginApp/login/")
 
 
+@login_required
 def search(request):
     user = request.user
     if user.is_authenticated:
