@@ -1,0 +1,66 @@
+[
+    {
+        "model": "miblog.Pais",
+        "pk": 1,
+        "fields": {
+            "nombre": "Ecuador",
+            "abreviatura": "EC"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 2,
+        "fields": {
+            "nombre": "Chile",
+            "abreviatura": "CH"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 3,
+        "fields": {
+            "nombre": "Mexico",
+            "abreviatura": "MX"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 4,
+        "fields": {
+            "nombre": "Argetina",
+            "abreviatura": "AR"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 5,
+        "fields": {
+            "nombre": "Colombia",
+            "abreviatura": "CO"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 6,
+        "fields": {
+            "nombre": "Peru",
+            "abreviatura": "PE"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 7,
+        "fields": {
+            "nombre": "Bolivia",
+            "abreviatura": "BO"
+        }
+    },
+    {
+        "model": "miblog.Pais",
+        "pk": 8,
+        "fields": {
+            "nombre": "Estados Unidos de América",
+            "abreviatura": "US"
+        }
+    }
+]
