@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
-from tres_D_eehernandezapp.blogApp.models import Pais
+from blogApp.models import Pais
 
 # Create your models here.
 class UsuarioManager(BaseUserManager):
-    def create_user(self, email, nombres, cedula, pais, password=None):
+    def create_user(self, email, nombres, cedula, password=None):
         if not email:
             raise ValueError('el usuario debe tener un email.')
 
@@ -15,7 +15,6 @@ class UsuarioManager(BaseUserManager):
             email=self.normalize_email(email),
             nombres=nombres,
             cedula=cedula,
-            pais=pais
         )
 
         user.set_password(password)
