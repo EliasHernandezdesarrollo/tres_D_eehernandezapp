@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blogApp',
     'loginApp',
-    'django_bootstrap5'
+    'bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -114,7 +114,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'miblog.Usuario'
+AUTH_USER_MODEL = 'loginApp.Usuario'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

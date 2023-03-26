@@ -1,0 +1,17 @@
+{% extends 'index.html' %} {% block content %}
+<div class=" my-3 container w-75">
+    <h3>Actualizar Post</h3>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-group d-flex flex-column justify-content-center gap-3">
+            {{ form }}
+            <div class="text-start">
+                <button class="btn btn-success">Guardar Cambios</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

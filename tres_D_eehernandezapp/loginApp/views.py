@@ -37,7 +37,7 @@ def register(request):
             try:
                 pais = Pais.objects.get(id=pais_pk)
                 Usuario.objects.create_user(email=email, password=password, cedula=cedula, nombres=nombres, pais=pais)
-                return redirect('/login/')
+                return redirect('loginApp/login')
             except:
                 paises = Pais.objects.all()
                 return render(request, 'register.html', {"paises": paises, "message": "Ocurrio un error, intenta de nuevo."})
@@ -47,4 +47,4 @@ def register(request):
 
 def exit(request):
     logout(request)
-    return redirect('login')
+    return redirect('loginApp/login')
