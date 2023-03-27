@@ -13,7 +13,7 @@ def home(request):
         posts = Posts.objects.all()
         return render(request, 'home.html', {"posts": posts})
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 @login_required
 def posts(request):
@@ -25,7 +25,7 @@ def posts(request):
         except Posts.DoesNotExist:
             return render(request, 'posts.html')
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 @login_required
 def create_post(request):
@@ -42,7 +42,7 @@ def create_post(request):
         else:
             return render(request, 'create_post.html', {"form": PostsForm })
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
 @login_required
@@ -60,7 +60,7 @@ def create_tag(request):
         else:
             return render(request, 'create_tag.html', {"form": TagForm})
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
 @login_required
@@ -78,7 +78,7 @@ def create_categoria(request):
         else:
             return render(request, 'create_categoria.html', {"form": CategoriaForm})
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
 @login_required
@@ -95,7 +95,7 @@ def edit_post(request, id):
             form.save()
             return redirect("/posts/")
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
 @login_required
@@ -107,7 +107,7 @@ def delete_post(request, id):
         post.delete()
         return redirect("/posts/")
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
 @login_required
@@ -121,6 +121,6 @@ def search(request):
         else:
             return redirect("/posts/")
     else:
-        return redirect("/loginApp/login/")
+        return redirect("/login/")
 
 
